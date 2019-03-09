@@ -1,0 +1,39 @@
+#!/bin/bash
+
+case $1 in
+    "install")
+        make install -f ./build/Makefile
+    ;;
+
+    "build")
+        make build -f ./build/Makefile -B
+    ;;
+
+    "test")
+        echo "Tests..."
+    ;;
+
+    "run")
+        if [[ $2 == "build" ]]; then
+        	docker run -p 8080:8080 lanago:latest
+        else
+        	go run -v main.go
+        fi
+    ;;
+    
+    "publish")
+    	make publish -f ./build/Makefile -B
+    ;;
+    
+    "release")
+    	make release -f ./build/Makefile -B
+    ;;
+
+    *)
+        echo "Invalid action, you sould run one of the following options:"
+        echo
+        echo "  - build"
+        echo "  - test"
+        echo "  - run [ build ]"
+    ;;
+esac
