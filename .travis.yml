@@ -5,6 +5,7 @@ services:
 
 env:
   - HEROKU_TOKEN=066a5fb5-a2ba-4627-89d0-0e9fdbaa28aa
+  - HEROKU_API_KEY=167d5465-b3c7-46cc-a1bf-08aaa642a634
 
 go:
   - 1.12.x
