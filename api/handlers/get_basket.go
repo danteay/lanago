@@ -12,6 +12,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// GetBasket has the logic that handles the return of a specific basket and it's
+// items. This actions includes the caculation of the basket total and the
+// application of the available discounts for it
 func GetBasket(context *config.ServiceClients) func(c *gin.Context) {
 	return func(c *gin.Context) {
 		u := c.Request.RequestURI
@@ -42,7 +45,7 @@ func GetBasket(context *config.ServiceClients) func(c *gin.Context) {
 			return
 		}
 
-		setTotalBasket(&basket)
+		setTotalOfBasket(&basket)
 
 		r.Res(200, rest.Payload{
 			"status": "success",
@@ -52,6 +55,8 @@ func GetBasket(context *config.ServiceClients) func(c *gin.Context) {
 	}
 }
 
+// getBasketErrorResponse is a general error response fpr the get basket actions
+// an validations
 func getBasketErrorResponse(r *rest.IO, err error, code int) {
 	r.Res(code, rest.Payload{
 		"status": "error",
@@ -59,7 +64,9 @@ func getBasketErrorResponse(r *rest.IO, err error, code int) {
 	}, err.Error())
 }
 
-func setTotalBasket(b *models.Basket) {
+// setTotalOfBasket calculates the final amount of a basket by addig the product
+// prices and applying the available discounts
+func setTotalOfBasket(b *models.Basket) {
 	b.Total = 0
 
 	for _, i := range b.Items {

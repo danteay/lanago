@@ -15,6 +15,12 @@
 			"revisionTime": "2018-07-02T16:12:45Z"
 		},
 		{
+			"checksumSHA1": "CSPbwbyzqA6sfORicn4HFtIhF/c=",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "d8f796af33cc11cb798c1aaeb27a4ebc5099927d",
+			"revisionTime": "2018-08-30T19:11:22Z"
+		},
+		{
 			"checksumSHA1": "imR2wF388/0fBU6RRWx8RvTi8Q8=",
 			"path": "github.com/facebookgo/clock",
 			"revision": "600d898af40aa09a7a93ecb9265d87b0504b6f03",
@@ -147,6 +153,12 @@
 			"revisionTime": "2018-07-18T01:23:57Z"
 		},
 		{
+			"checksumSHA1": "LuFv4/jlrmFNnDb/5SCSEPAM9vU=",
+			"path": "github.com/pmezard/go-difflib/difflib",
+			"revision": "5d4384ee4fb2527b0a1256a821ebfc92f91efefc",
+			"revisionTime": "2018-12-26T10:54:42Z"
+		},
+		{
 			"checksumSHA1": "q6JII/ziSLMqwajFGHj6w8V+RbA=",
 			"path": "github.com/rubyist/circuitbreaker",
 			"revision": "2074adba5ddc7d5f7559448a9c3066573521c5bf",
@@ -157,6 +169,12 @@
 			"path": "github.com/satori/go.uuid",
 			"revision": "b2ce2384e17bbe0c6d34077efa39dbab3e09123b",
 			"revisionTime": "2018-10-28T12:50:25Z"
+		},
+		{
+			"checksumSHA1": "gVqfXhvebqIrkZHqnpeMMZxZ3l4=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "21cb1c2932a2d04c6792d5ad106243c6e36a3a7d",
+			"revisionTime": "2019-01-10T02:11:10Z"
 		},
 		{
 			"checksumSHA1": "WIhpR3EKGueRSJsYOZ6PIsfL4SI=",

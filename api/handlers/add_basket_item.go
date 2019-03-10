@@ -98,16 +98,6 @@ func addBasketItemErrorResponse(r *rest.IO, err error, code int) {
 	}, err.Error())
 }
 
-// processBasket is the asyc task that will add the new product to the current
-// basket. This find for a previous insertion of the same product into the
-// basket, if is not found, then creates a new record, update the current total
-// and finally apply the available discounts an storage the result basket on
-// redis again
-func processBasket(b *models.Basket, c *config.ServiceClients) {
-	// applyDiscounts(b)
-	saveBasket(b, c)
-}
-
 // SaveBasket storage the computed information into Redis
 func saveBasket(b *models.Basket, c *config.ServiceClients) {
 	j, err := json.Marshal(b)
