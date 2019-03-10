@@ -24,6 +24,6 @@ script:
 after_script:
   - docker login -u _ -p "$HEROKU_TOKEN"  registry.heroku.com
   - ./exec build
-  - ./exec publis
+  - ./exec publish
 
 
