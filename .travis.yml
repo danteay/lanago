@@ -4,7 +4,6 @@ services:
   - docker
 
 env:
-  - GO111MODULE=on
   - HEROKU_TOKEN=066a5fb5-a2ba-4627-89d0-0e9fdbaa28aa
 
 go:
@@ -23,7 +22,7 @@ script:
 
 after_script:
   - docker login -u _ -p "$HEROKU_TOKEN"  registry.heroku.com
-  - ./exec build
   - ./exec publish
+  - ./exec release
 
 

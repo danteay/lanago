@@ -5,4 +5,4 @@ if [ ! -d "out" ]; then
 fi
 
 env GOOS=linux GOARCH=amd64 GOARM=5 go build -v -o out/api .
-docker build -t lanago . -f build/Dockerfile
+docker build -t registry.heroku.com/docker-travis-heroku/web . -f build/Dockerfile
