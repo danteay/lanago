@@ -1,11 +1,34 @@
 language: go
 
+services:
+  - docker
+
+env:
+  - GO111MODULE=on
+  - HEROKU_TOKEN=066a5fb5-a2ba-4627-89d0-0e9fdbaa28aa
+
 go:
   - 1.12.x
 
+git:
+  depth: 1
+
+before_install:
+  - ./exec install
+
+install: true
+
+script:
+  - ./exec test
+
+after_script:
+  - docker login -u _ -p "$HEROKU_TOKEN"  registry.heroku.com
+  - ./exec build
+  - ./exec publis
 
 deploy:
   provider: heroku
   api_key:
-    secure: "YOUR ENCRYPTED API KEY"
+    secure: 066a5fb5-a2ba-4627-89d0-0e9fdbaa28aa
   app: lanago
+

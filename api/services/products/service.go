@@ -75,8 +75,6 @@ func (ps *ProductsService) FindProduct(code string) (*models.Product, error) {
 	}
 
 	for _, v := range list {
-		ps.Logger.Debug(v.Code, code)
-
 		if v.Code == code {
 			return &v, nil
 		}

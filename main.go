@@ -20,7 +20,8 @@ func main() {
 	}()
 
 	context := new(config.ServiceClients)
-	context.Init()
+	context.LoadConfigurations()
+	context.InitServices()
 
 	app := gin.New()
 	app.Use(gin.Logger())
