@@ -1,0 +1,11 @@
+language: go
+
+go:
+  - 1.12.x
+
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "YOUR ENCRYPTED API KEY"
+  app: lanago

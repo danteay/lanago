@@ -4,10 +4,9 @@ import (
 	"encoding/json"
 	"time"
 
-	"lanago/api/models"
-	"lanago/config"
-
 	rest "github.com/danteay/ginrest"
+	"github.com/danteay/lanago/api/models"
+	"github.com/danteay/lanago/config"
 	"github.com/gin-gonic/gin"
 )
 

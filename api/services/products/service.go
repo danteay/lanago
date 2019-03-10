@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"lanago/api/libs"
-	"lanago/api/models"
+	"github.com/danteay/lanago/api/libs"
+	"github.com/danteay/lanago/api/models"
 )
 
 // ProductService is the main structure to handle the list of avalable producs

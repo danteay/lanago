@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// PingHandler has the logic to handle /ping endpoint requets
+// PingHandler is a simple get endpoint that can be used for healt check
 func PingHandler() func(c *gin.Context) {
 	return func(c *gin.Context) {
 		u := c.Request.RequestURI

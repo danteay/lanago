@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"lanago/config"
+	"github.com/danteay/lanago/config"
 
 	rest "github.com/danteay/ginrest"
 	"github.com/gin-gonic/gin"

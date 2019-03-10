@@ -2,11 +2,11 @@ package handlers
 
 import (
 	"encoding/json"
-	"lanago/api/models"
-	"lanago/config"
 	"time"
 
 	rest "github.com/danteay/ginrest"
+	"github.com/danteay/lanago/api/models"
+	"github.com/danteay/lanago/config"
 	"github.com/gin-gonic/gin"
 	uuid "github.com/satori/go.uuid"
 )

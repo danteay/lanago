@@ -1,8 +1,6 @@
 package discounts
 
-import (
-	"lanago/api/models"
-)
+import "github.com/danteay/lanago/api/models"
 
 // TwoXOne apply 2 x 1 promotion to the current basquet.
 // It receives the a pointer to te current basket as first parameter

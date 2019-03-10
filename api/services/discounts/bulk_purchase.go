@@ -1,8 +1,6 @@
 package discounts
 
-import (
-	"lanago/api/models"
-)
+import "github.com/danteay/lanago/api/models"
 
 // BulkPurchase has the logic to
 func BulkPurchase(b *models.Basket, price float64, c Condition) {

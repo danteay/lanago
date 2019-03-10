@@ -1,10 +1,10 @@
 package config
 
 import (
-	"lanago/api/libs"
-	"lanago/api/services/products"
 	"os"
 
+	"github.com/danteay/lanago/api/libs"
+	"github.com/danteay/lanago/api/services/products"
 	"github.com/go-redis/redis"
 	"github.com/joho/godotenv"
 )

@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"lanago/api/routes"
-	"lanago/config"
+	"github.com/danteay/lanago/api/routes"
+	"github.com/danteay/lanago/config"
 
 	"github.com/gin-gonic/gin"
 )

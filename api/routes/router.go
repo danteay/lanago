@@ -1,9 +1,8 @@
 package routes
 
 import (
-	"lanago/api/handlers"
-	"lanago/config"
-
+	"github.com/danteay/lanago/api/handlers"
+	"github.com/danteay/lanago/config"
 	"github.com/gin-gonic/gin"
 )
 
