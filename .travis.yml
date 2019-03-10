@@ -26,9 +26,4 @@ after_script:
   - ./exec build
   - ./exec publis
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: 066a5fb5-a2ba-4627-89d0-0e9fdbaa28aa
-  app: lanago
 
