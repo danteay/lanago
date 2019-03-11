@@ -15,7 +15,7 @@ func PingHandler() func(c *gin.Context) {
 			"status": "success",
 			"object": "lanago.get.ping",
 			"code":   200,
-		}, "pong...")
+		}, "pong")
 		return
 	}
 }

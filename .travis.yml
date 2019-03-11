@@ -20,6 +20,13 @@ script:
 after_script:
   - docker login -u _ -p "$HEROKU_TOKEN"  registry.heroku.com
   - ./exec publish
-  - ./exec release
+
+deploy:
+  provider: script
+  script: ./exec release
+
+branches:
+  only:
+    - master
 
 
