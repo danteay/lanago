@@ -10,7 +10,7 @@ case $1 in
     ;;
 
     "test")
-        export CONFIG_FILE="$PWD/test.env"
+        export CONFIG_FILE="$PWD/config/test.env"
         go test -v -race ./...
     ;;
 
@@ -18,7 +18,7 @@ case $1 in
         if [[ $2 == "build" ]]; then
         	docker run -p 8080:8080 lanago:latest
         else
-            export CONFIG_FILE="$PWD/dev.env"
+            export CONFIG_FILE="$PWD/config/dev.env"
         	go run -v main.go
         fi
     ;;

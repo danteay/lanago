@@ -8,9 +8,6 @@
 * Docker
 * [Heroku-Cli](https://devcenter.heroku.com/articles/heroku-cli)
 * [Govendor](https://github.com/kardianos/govendor/)
-
-### Specific project dependencies
-
 * [Gin-gonic as REST framework](https://gin-gonic.com/)
 * [Godotenv as env loader](https://github.com/joho/godotenv)
 * [GinRest as response helper](https://github.com/danteay/ginrest)
@@ -25,7 +22,37 @@ dependencies like the DB managers and configuration managers.
 
 Godotenv was selected to help with the environment management, having the possibility of change different configurations easily, like local configurations, production and testing.
 
+Redis was selected to have a semi persistent track of the baskets, this allow us to auto clean the
+incomplete process that never go to the checkout (this will be conbained with persistent baskets in
+checkout process and cookies)
 
+### Project directories
+
+The project structure has the next configuration:
+
+```text
++ api/
+|  + config/
+|  + handlers/
+|  + libs/
+|  + models/
+|  + rotes/
+|  + services/
++ build/
+|  + build.sh
+|  + Dockerfile
+|  + Makefile
++ config/
+|  + dev.env
+|  + test.env
+|  + prod.env
++ out/
++ vendor/
+|  + vendor.json
++ main.go
++ exec
++ .travis.yml
+```
 
 ## Local deployment
 

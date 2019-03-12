@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/danteay/lanago/config"
+	"github.com/danteay/lanago/api/config"
 	"github.com/stretchr/testify/assert"
 )
 

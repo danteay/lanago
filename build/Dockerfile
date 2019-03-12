@@ -5,7 +5,7 @@ ENV GIN_MODE release
 ENV PORT 8080
 
 ADD out/api /app/api
-ADD ./prod.env ${CONFIG_FILE}
+ADD ./config/prod.env ${CONFIG_FILE}
 
 RUN chmod +x /app/api
 
