@@ -4,12 +4,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/danteay/lanago/api/libs"
+	"github.com/danteay/lanago/api/libs/logger"
 	"github.com/joho/godotenv"
 	"github.com/stretchr/testify/assert"
 )
 
-var testLogger = new(libs.Logger)
+var testLogger = new(logger.Logger)
 
 func loadTestServiceEnv() {
 	filepath := os.Getenv("CONFIG_FILE")
