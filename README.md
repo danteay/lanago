@@ -1,4 +1,4 @@
-# Lana Go challenge
+# Lana Go
 
 [![Build Status](https://travis-ci.com/danteay/lanago.svg?branch=master)](https://travis-ci.com/danteay/lanago)
 
