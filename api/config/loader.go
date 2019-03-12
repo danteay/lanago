@@ -5,7 +5,7 @@ import (
 	"path"
 	"runtime"
 
-	"github.com/danteay/lanago/api/libs"
+	"github.com/danteay/lanago/api/libs/logger"
 	"github.com/danteay/lanago/api/services/products"
 	"github.com/go-redis/redis"
 	"github.com/joho/godotenv"
@@ -15,7 +15,7 @@ import (
 // perform operations
 type ServiceClients struct {
 	Redis           *redis.Client
-	Logger          *libs.Logger
+	Logger          *logger.Logger
 	ProductsService *products.ProductsService
 }
 
@@ -24,7 +24,7 @@ type ServiceClients struct {
 func (s *ServiceClients) InitServices() {
 	s.Redis = GetRedis()
 
-	s.Logger = new(libs.Logger)
+	s.Logger = new(logger.Logger)
 	s.Logger.Init()
 
 	s.ProductsService = new(products.ProductsService)

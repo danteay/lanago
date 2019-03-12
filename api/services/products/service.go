@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/danteay/lanago/api/libs"
+	"github.com/danteay/lanago/api/libs/logger"
 	"github.com/danteay/lanago/api/models"
 )
 
@@ -16,7 +16,7 @@ import (
 // debug errors
 type ProductsService struct {
 	ServiceURL string
-	Logger     *libs.Logger
+	Logger     *logger.Logger
 }
 
 // productServiceList is the structure to capture the response of the
@@ -27,9 +27,9 @@ type productServiceList struct {
 
 // Init initialize receives the logger instances and obtain the service URL, the
 // storage the obtained values into the struture properties
-func (ps *ProductsService) Init(logger *libs.Logger) {
+func (ps *ProductsService) Init(l *logger.Logger) {
 	ps.ServiceURL = os.Getenv("PRODUCTS_SERVICE_URL")
-	ps.Logger = logger
+	ps.Logger = l
 }
 
 // GetProducts return a slice of product strutures and eror if some exists in

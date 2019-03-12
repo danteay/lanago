@@ -54,6 +54,32 @@ The project structure has the next configuration:
 + .travis.yml
 ```
 
+* **api**: Holds all the related code with the endpoints, libraries and business logic.
+  * **config**: Dependency configurations
+  * **handler**: Route handlers logic
+  * **libs**: Specific libraries created for the project
+  * **models**: Structure definitions
+  * **routes**: All the route configurations
+  * **services**: Libraries that handles business logic and external resources like calls to other micro services
+* **build**: Holds all the necesary files to build the proyect in production and other stage needed. This files are
+  make files, docker files and bash files
+* **config**: Holds the environment configurations like dev, test and production
+* **out**: This specific folder is created when the build command is triggered and holds the builded file of the project
+* **vendor**: This is the dependency folder that is managed by Govendor
+
+#### Exec file
+
+This is a bash file that have preconfigured options like test, run and build and is used in the Travis-CI pipeline to deploy the application. this are the availabe commands:
+
+```bash
+./exec test      # Run tests with it's corresponding configurations
+./exec run       # Run the project localy with the command 'go run'
+./exec run build # Run the last builded docker project and is necesary to build it first before run this command
+./exec build     # Run build the docker project
+./exec publish   # Push the last docker build to the heroku container registry
+./exec release   # Release the last docker images pushed to heroku in production
+```
+
 ## Local deployment
 
 To run the project locally first you need to have installed the dependencies listed above, then clone this repository inside `GOPATH/src/github.com/danteay/lanago`:
