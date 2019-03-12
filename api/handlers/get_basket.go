@@ -12,7 +12,7 @@ import (
 )
 
 // GetBasket has the logic that handles the return of a specific basket and it's
-// items. This actions includes the caculation of the basket total and the
+// items. This actions includes the calculation of the basket total and the
 // application of the available discounts for it
 func GetBasket(context *config.ServiceClients) func(c *gin.Context) {
 	return func(c *gin.Context) {
@@ -54,8 +54,7 @@ func GetBasket(context *config.ServiceClients) func(c *gin.Context) {
 	}
 }
 
-// getBasketErrorResponse is a general error response fpr the get basket actions
-// an validations
+// getBasketErrorResponse is a general error response for the GetBasket validations
 func getBasketErrorResponse(r *rest.IO, err error, code int) {
 	r.Res(code, rest.Payload{
 		"status": "error",
@@ -63,7 +62,7 @@ func getBasketErrorResponse(r *rest.IO, err error, code int) {
 	}, err.Error())
 }
 
-// setTotalOfBasket calculates the final amount of a basket by addig the product
+// setTotalOfBasket calculates the final amount of a basket by adding the product
 // prices and applying the available discounts
 func setTotalOfBasket(b *models.Basket) {
 	b.Total = 0
@@ -75,8 +74,8 @@ func setTotalOfBasket(b *models.Basket) {
 	applyDiscounts(b)
 }
 
-// applyDiscounts is the wrapper funtion to apply all the available discounts
-// at the moment for the current basket
+// applyDiscounts is the wrapper function to apply all the available discounts
+// for the current basket
 func applyDiscounts(b *models.Basket) {
 	discounts.TwoXOne(b, func(elem interface{}) bool {
 		i := elem.(models.Product)

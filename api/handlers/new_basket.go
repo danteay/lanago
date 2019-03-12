@@ -11,8 +11,8 @@ import (
 	uuid "github.com/satori/go.uuid"
 )
 
-// NewBasquet is the action handler the registration of a new basquet.
-// It generates a new UUID v4 for the ID of the basquent and storage on Redis,
+// NewBasquet is the action handler the registration of a new basket.
+// It generates a new UUID v4 for the ID of the basket and storage on Redis,
 // Then return an object response with the created data
 func NewBasket(context *config.ServiceClients) func(c *gin.Context) {
 	return func(c *gin.Context) {

@@ -10,14 +10,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// addBasketItemRequest is the request data pf the endpoint
+// addBasketItemRequest is the request data of the endpoint
 type addBasketItemRequest struct {
 	Code string `json:"code,required"`
 }
 
 // AddBasketItem is the action handler to add a new Product to an specific
-// basket. If the basket is not found it fails, and if is finded, will add the
-// product is asyc way.
+// basket. If the basket is not found it fails, and if found, the product
+// will be added asynchronously
 func AddBasketItem(context *config.ServiceClients) func(c *gin.Context) {
 	return func(c *gin.Context) {
 		u := c.Request.RequestURI

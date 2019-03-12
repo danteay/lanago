@@ -14,43 +14,43 @@ type Logger struct{}
 // logWriter is an structure to manage the wirter og the logging functions
 type logWriter struct{}
 
-// Writer is an override of the default logger writer to set the format nedded
-// in the logs
+// Writer is an override of the default writer for the logger to set the
+// format needed in the logs
 func (w *logWriter) Write(bytes []byte) (int, error) {
 	return fmt.Print(string(bytes))
 }
 
-// Init setup the logger configuration writer
+// Init setup the writer configuration
 func (l *Logger) Init() {
 	log.SetFlags(0)
 	log.SetOutput(new(logWriter))
 }
 
-// Debug is the fuction that logs with a Debug tag, it wrapps the Log general
-// function
+// Debug is the function that logs with a Debug prefix tag, it wrapps the Log
+// general function
 func (l *Logger) Debug(c ...interface{}) {
 	l.Log("Debug", c)
 }
 
-// Info is the fuction that logs with a Debug tag, it wrapps the Log general
-// function
+// Info is the function that logs with a Info prefix tag, it wrapps the Log
+// general function
 func (l *Logger) Info(c ...interface{}) {
 	l.Log("Info", c)
 }
 
-// Warnin is the fuction that logs with a Debug tag, it wrapps the Log general
-// function
+// Warnin is the function that logs with a Warning tag, it wrapps the Log
+// general function
 func (l *Logger) Warnin(c ...interface{}) {
 	l.Log("Warning", c)
 }
 
-// Error is the fuction that logs with a Debug tag, it wrapps the Log general
-// function
+// Error is the function that logs with a Error prefix tag, it wrapps the Log
+// general function
 func (l *Logger) Error(c ...interface{}) {
 	l.Log("Error", c)
 }
 
-// Log is the general logging action, where 't' is a thex to identify the type
+// Log is the general logging action, where 't' is a text to identify the type
 // of log that you are printing, and c is a collection of some other parameters
 // of any type that will be printed as message of the log
 func (l *Logger) Log(t string, c ...interface{}) {

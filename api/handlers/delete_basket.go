@@ -6,8 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// DeleteBasket is the action that handle the detletion of an existing basket.
-// It receives a basket ID from the URL amd search on Redis to delete it on
+// DeleteBasket is the action that handle the deletion of an existing basket.
+// It receives a basket ID from the URL, and search on Redis to delete it on
 // asyc way
 func DeleteBasket(context *config.ServiceClients) func(c *gin.Context) {
 	return func(c *gin.Context) {

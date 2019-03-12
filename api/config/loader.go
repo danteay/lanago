@@ -19,7 +19,7 @@ type ServiceClients struct {
 	ProductsService *products.ProductsService
 }
 
-// Init charge all the env variables and cofigures the ServiceClients
+// Init charge all the env variables and cofigure the ServiceClients
 // struct
 func (s *ServiceClients) InitServices() {
 	s.Redis = GetRedis()

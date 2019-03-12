@@ -7,12 +7,12 @@ import (
 	"github.com/go-redis/redis"
 )
 
-// GetRedis return a new Redis connection manager. This connection thakes it
+// GetRedis return a new Redis connection manager. This connection takes it
 // configuration from the next ENV vars.
 //
-// REDIS_HOST: Redis host and port connection (localhost:12345)
-// REDIS_PASS: Redis connection pasword
-// REDIS_DBAS: Redis connection index or database
+// REDIS_HOST: Redis host and port (localhost:12345)
+// REDIS_PASS: Redis pasword
+// REDIS_DBAS: Redis index or database
 func GetRedis() *redis.Client {
 	var db int64
 	var err error

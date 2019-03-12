@@ -7,7 +7,8 @@ import (
 )
 
 // InitRoutes register all the endpoits for the application.
-// It needs point of gin.Engine to bind the routes
+// It needs a gin.Engine pointer to bind the routes and config.ServiceClients
+// as context of the application and its dependencies
 func InitRoutes(app *gin.Engine, context *config.ServiceClients) {
 	app.GET("/ping", handlers.PingHandler())
 
